@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+*******************************************************************************
+*
+*    HTML File for the Vicidial WebRTC Phone
+*
+*    Copyright (C) 2016  Michael Cargile
+*
+*    This program is free software: you can redistribute it and/or modify
+*    it under the terms of the GNU Affero General Public License as
+*    published by the Free Software Foundation, either version 3 of the
+*    License, or (at your option) any later version.
+*
+*    This program is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU Affero General Public License for more details.
+*
+*    You should have received a copy of the GNU Affero General Public License
+*    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*
+*******************************************************************************
+-->
+<html manifest="cyburphone.appcache">
+	<head>
+		<title>Commtrunks</title>
+		<link rel="stylesheet" href="<?php echo $layout; ?>" />
+		<link rel="stylesheet" href="css/default.css">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+		
+	</head>
+	<body>
+		<!-- Container -->
+		<div id="container">
+
+			<!-- Main -->
+			<div id="main">
+				<!-- Video element to handle audio -->
+				<audio autoplay width='0' hieght='0' id="audio"></audio>
+				<!--<video width='0' hieght='0' id="audio"></video>-->
+
+				<!-- Logo -->
+				<section id="logo">
+					<img id="logo_img" src="images/Commtrunks.png">
+				</section>
+				<!-- End Logo -->
+
+				<!-- Controls -->
+				<section id="controls">
+					<section id="registration_control">
+						<input type="text" value="Unregistered" id="reg_status" readonly>
+						<button class="button" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
+						<button class="button" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
+					</section>
+					<section id="dial_control">
+						<input type="text" name="digits" value="" id="digits"/>
+					</section>
+					<section id="audio_control">
+						<button class="button" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
+						<button class="button" id="mic_mute"><img id="mute_icon" src="images/wp_mic_on.gif" alt="mute"></button>
+						<button class="button" id="vol_up"><img id="vol_up_icon" src="images/wp_speaker_up.gif" alt="register"></button>
+						<button class="button" id="vol_down"><img id="vol_down_icon" src="images/vol-minus.png" alt="register"></button>
+
+					</section>
+					<section id="panel">
+						<button class="button" id="hangup"><img id="hangup_icon" src="images/wp_hangup.gif" alt="register"></button>
+
+					</section>
+				</section>
+
+
+				<!-- End Controls -->
+
+				<!-- Dialpad -->
+				<section id="dialpad">
+					<section id="dial_row1">
+					<button class="dialpad_button" id="one">1</button>
+					<button class="dialpad_button" id="two">2</button>
+					<button class="dialpad_button" id="three">3</button>
+					</section>
+					<section id="dial_row2">
+					<button class="dialpad_button" id="four">4</button>
+					<button class="dialpad_button" id="five">5</button>
+					<button class="dialpad_button" id="six">6</button>
+					</section>
+					<section id="dial_row3">
+					<button class="dialpad_button" id="seven">7</button>
+					<button class="dialpad_button" id="eight">8</button>
+					<button class="dialpad_button" id="nine">9</button>
+					</section>
+					<section id="dial_row4">
+					<button class="dialpad_button" id="star">*</button>
+					<button class="dialpad_button" id="zero">0</button>
+					<button class="dialpad_button" id="pound">#</button>
+					</section>
+					<section id="dial_dtmf">
+					<input type="text" name="dtmf_digits" value="" id="dtmf_digits"/>
+					<button class="button" id="send_dtmf">Send</button>
+					</section>
+				</section>
+				<!-- End Dialpad -->
+
+			</div>
+			<!-- End Main -->
+
+		</div>
+		<!-- End Container -->
+
+
+		
+
+
+
+	</body>
